@@ -10,7 +10,7 @@ RSpec.describe "StaticPages", type: :request do
         expect(response.status).to eq 200
       end
       it 'タイトルが正しく表示されていること' do
-        expect(response.body).to include("Home | Ruby on Rails Tutorial Sample App")
+        expect(response.body).to include("Ruby on Rails Tutorial Sample App")
       end
     end
   end
