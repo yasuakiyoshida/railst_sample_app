@@ -2,9 +2,9 @@ require 'rails_helper.rb'
 
 RSpec.describe "StaticPages", type: :request do
   describe 'Homeページ' do
-    context "Homeページが正しく表示される" do
+    context "Homeページがルートに設定されていて正しく表示される" do
       before do
-        get static_pages_home_path
+        get root_path
       end
       it 'リクエストは200 OKとなること' do
         expect(response.status).to eq 200
