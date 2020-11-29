@@ -42,4 +42,18 @@ RSpec.describe "StaticPages", type: :request do
       end
     end
   end
+  
+  describe 'Contactページ' do
+    context "contactページが正しく表示される" do
+      before do
+        get static_pages_contact_path
+      end
+      it 'リクエストは200 OKとなること' do
+        expect(response.status).to eq 200
+      end
+      it 'タイトルが正しく表示されていること' do
+        expect(response.body).to include("Contact | Ruby on Rails Tutorial Sample App")
+      end
+    end
+  end
 end
