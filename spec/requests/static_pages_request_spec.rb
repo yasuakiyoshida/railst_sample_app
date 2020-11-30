@@ -18,7 +18,7 @@ RSpec.describe "StaticPages", type: :request do
   describe 'Helpページ' do
     context "helpページが正しく表示される" do
       before do
-        get static_pages_help_path
+        get help_path
       end
       it 'リクエストは200 OKとなること' do
         expect(response.status).to eq 200
@@ -32,7 +32,7 @@ RSpec.describe "StaticPages", type: :request do
   describe 'Aboutページ' do
     context "aboutページが正しく表示される" do
       before do
-        get static_pages_about_path
+        get about_path
       end
       it 'リクエストは200 OKとなること' do
         expect(response.status).to eq 200
@@ -46,7 +46,7 @@ RSpec.describe "StaticPages", type: :request do
   describe 'Contactページ' do
     context "contactページが正しく表示される" do
       before do
-        get static_pages_contact_path
+        get contact_path
       end
       it 'リクエストは200 OKとなること' do
         expect(response.status).to eq 200
